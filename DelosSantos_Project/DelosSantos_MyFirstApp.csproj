@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5ADAAC79-3B32-40A2-8428-EED3373B1A89}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DelosSantos_Project</RootNamespace>
+    <AssemblyName>DelosSantos_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\Videos\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.11.8.0\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlumniPortal\Community.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlumniPortal\Community.Designer.cs">
+      <DependentUpon>Community.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlumniPortal\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlumniPortal\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlumniPortal\Dashboard2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlumniPortal\Dashboard2.Designer.cs">
+      <DependentUpon>Dashboard2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlumniPortal\CareerSupport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlumniPortal\CareerSupport.Designer.cs">
+      <DependentUpon>CareerSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\CirclePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomDateTimePicker.Designer.cs">
+      <DependentUpon>CustomDateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\CustomRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ExtendedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\GlassyPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\RoundedForms.cs" />
+    <Compile Include="CustomControls\RoundedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ColoredForegroundTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\TransparentBackgroundTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\DisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DisplayForm.Designer.cs">
+      <DependentUpon>DisplayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Homepage1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Homepage1.Designer.cs">
+      <DependentUpon>Homepage1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Implementations\BorderRadiusWindow.cs" />
+    <Compile Include="Homepage\Contact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Homepage\Contact.Designer.cs">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage\OfferedCourses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Homepage\OfferedCourses.Designer.cs">
+      <DependentUpon>OfferedCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage\BasicInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Homepage\BasicInfo.Designer.cs">
+      <DependentUpon>BasicInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage\EducationalBackground.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Homepage\EducationalBackground.Designer.cs">
+      <DependentUpon>EducationalBackground.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Implementations\IButtonWindow.cs" />
+    <Compile Include="Implementation Abstract\CloseWindow.cs" />
+    <Compile Include="Forms\LoginUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginUser.Designer.cs">
+      <DependentUpon>LoginUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Implementations\ISidePanel.cs" />
+    <Compile Include="Registration\BasicInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Registration\BasicInformation.Designer.cs">
+      <DependentUpon>BasicInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Consent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Registration\Consent.Designer.cs">
+      <DependentUpon>Consent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Contact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Registration\Contact.Designer.cs">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidatePerson\DifferentClass.cs" />
+    <Compile Include="Registration\EducationalBg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Registration\EducationalBg.Designer.cs">
+      <DependentUpon>EducationalBg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidatePerson\AlumniModel.cs" />
+    <Compile Include="ValidatePerson\PersonValidation3.cs" />
+    <Compile Include="ValidatePerson\PersonValidation1.cs" />
+    <Compile Include="ValidatePerson\PersonValidation2.cs" />
+    <EmbeddedResource Include="AlumniPortal\Community.resx">
+      <DependentUpon>Community.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlumniPortal\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlumniPortal\Dashboard2.resx">
+      <DependentUpon>Dashboard2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlumniPortal\CareerSupport.resx">
+      <DependentUpon>CareerSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DisplayForm.resx">
+      <DependentUpon>DisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Homepage1.resx">
+      <DependentUpon>Homepage1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage\Contact.resx">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage\OfferedCourses.resx">
+      <DependentUpon>OfferedCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage\BasicInfo.resx">
+      <DependentUpon>BasicInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage\EducationalBackground.resx">
+      <DependentUpon>EducationalBackground.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginUser.resx">
+      <DependentUpon>LoginUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\BasicInformation.resx">
+      <DependentUpon>BasicInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\Consent.resx">
+      <DependentUpon>Consent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\Contact.resx">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\EducationalBg.resx">
+      <DependentUpon>EducationalBg.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lpu-alumni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lpu logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open Minds. Creating Futures.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\know.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\offered.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-picjumbocom-225232.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gmail_logo_144px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registration-form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow-icon-free-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Verification\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow-icon-free-png %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7612790.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\76127901.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\76127902.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\76127903.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3524659.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\35246591.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-job-recruitment-employment-agency-5ae110b4d1bb49.9315883415246993168591.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-job-recruitment-employment-agency-5ae110b4d1bb49.9315883415246993168591.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17521.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\175211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\57064.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\570641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\76127904.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\76127905.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Photo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-phone-1912209-1617678.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3178158.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21195.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lpu-alumni1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screen-Shot-2019-06-21-at-11.13.45-AM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\702300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\careers-main-945x450.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2021_Facebook_icon.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20110519_cas_238-1-scaled.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20110519_cas_238-1-scaled1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\community.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people-connecting-icon-vector-32726522.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
